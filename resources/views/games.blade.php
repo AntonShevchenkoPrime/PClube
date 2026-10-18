@@ -221,7 +221,7 @@
 <div class="filter-tabs">
     <button class="active">Все платформы</button>
     <button>PC</button>
-    <button>Консоли</button>
+    <button>Console</button>
     <button>VR</button>
 </div>
 
