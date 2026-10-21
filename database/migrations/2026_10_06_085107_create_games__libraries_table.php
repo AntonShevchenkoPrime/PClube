@@ -17,8 +17,9 @@ return new class extends Migration
             $table->string('tag');
             $table->string('name');
             $table->string('description');
-            $table->string('rating');
+            $table->string('rating')->nullable();
             $table->string('state');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

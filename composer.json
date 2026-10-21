@@ -34,9 +34,9 @@
     "scripts": {
         "setup": [
             "composer install",
-            "C:/php/8.5.4/nts/x64/php.exe -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "C:/php/8.5.4/nts/x64/php.exe artisan key:generate",
-            "C:/php/8.5.4/nts/x64/php.exe artisan migrate --force",
+            "D:/PHP/8.5.4/nts/x64/php.exe -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "D:/PHP/8.5.4/nts/x64/php.exe artisan key:generate",
+            "D:/PHP/8.5.4/nts/x64/php.exe artisan migrate --force",
             "npm install --ignore-scripts",
             "npm run build"
         ],

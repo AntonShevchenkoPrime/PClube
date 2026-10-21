@@ -20,7 +20,7 @@
                 "sidebar main";
         }
 
-        /* --- ЛОГОТИП --- */
+        /* ЛОГОТИП */
         .logo-area {
             grid-area: logo; display: flex; align-items: center; padding-left: 28px;
             background-color: #0d0d0d; z-index: 10;
@@ -32,7 +32,7 @@
         }
         .logo-text { font-size: 22px; font-weight: 800; letter-spacing: 1.5px; color: #fff; }
 
-        /* --- ХЕДЕР --- */
+        /* ХЕДЕР */
         .header {
             grid-area: header; display: flex; align-items: center; padding: 0 30px;
             background-color: #0d0d0d; position: relative;
@@ -42,7 +42,7 @@
             width: calc(100% + 260px); height: 1px; background-color: #333333; z-index: 1;
         }
 
-        /* --- НАВИГАЦИЯ В ХЕДЕРЕ --- */
+        /* НАВИГАЦИЯ В ХЕДЕРЕ */
         .header-nav { display: flex; gap: 40px; height: 100%; margin-left: 20px; }
         .header-nav a {
             display: flex; align-items: center; color: #777777; text-decoration: none;
@@ -58,7 +58,7 @@
         .header-nav a.active::after { animation: growLine 0.2s ease-out forwards; }
         @keyframes growLine { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
 
-        /* --- КНОПКИ ДЕЙСТВИЙ В ХЕДЕРЕ --- */
+        /* КНОПКИ ДЕЙСТВИЙ В ХЕДЕРЕ */
         .header-actions { margin-left: auto; display: flex; gap: 15px; align-items: center; }
         .action-btn {
             width: 44px; height: 44px; border-radius: 12px; background-color: #1a1a1a;
@@ -85,7 +85,7 @@
             border: 2px solid #0d0d0d;
         }
 
-        /* --- БОКОВАЯ ПАНЕЛЬ --- */
+        /* БОКОВАЯ ПАНЕЛЬ */
         .sidebar {
             grid-area: sidebar; padding: 30px 20px; background-color: #0d0d0d;
             position: relative; display: flex; flex-direction: column;
@@ -95,7 +95,7 @@
             height: calc(100% + 70px); width: 1px; background-color: #333333; z-index: 1;
         }
 
-        /* --- МЕНЮ В САЙДБАРЕ --- */
+        /* МЕНЮ В САЙДБАРЕ */
         .nav-title {
             color: #666; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
             margin-bottom: 15px; text-transform: uppercase;
@@ -116,7 +116,7 @@
         .nav-link svg { margin-right: 14px; opacity: 0.8; }
         .nav-link.active svg { opacity: 1; }
 
-        /* --- НИЖНЯЯ ЧАСТЬ САЙДБАРА --- */
+        /* НИЖНЯЯ ЧАСТЬ САЙДБАРА */
         .sidebar-bottom {
             margin-top: auto; /* Прижимает всё вниз */
             display: flex;
@@ -132,7 +132,7 @@
         .back-link:hover { color: #fff; background-color: #1a1a1a; }
         .back-link svg { margin-right: 14px; }
 
-        /* --- ОСНОВНОЙ КОНТЕНТ --- */
+        /* ОСНОВНОЙ КОНТЕНТ */
         .main-content {
             grid-area: main; padding: 30px; overflow-y: auto; background-color: #0d0d0d;
         }
@@ -235,6 +235,15 @@
                 <a href="{{ route('cabinet') }}" class="nav-link {{ request()->routeIs('cabinet') ? 'active' : '' }}">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                     Кабинет
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('management.games.index') }}" class="nav-link {{ request()->routeIs('management.*') ? 'active' : '' }}">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                    Управление
                 </a>
             </li>
         </ul>
